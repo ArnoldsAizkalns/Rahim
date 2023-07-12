@@ -17,6 +17,7 @@
 }
 
 body {
+  font-family: var(--font-raleway);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +25,90 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.bg-2 {
+  background-image: url("../../public/1bg.jpeg");
+  background-size: auto;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  pointer-events: auto;
+  transition: background-color 1.5s ease-in-out;
+  color: white;
+}
+.bg-1 {
+  background-image: url("../../public/2bg.jpeg");
+  background-size: auto;
+  width: auto;
+  height: auto;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+  transition: background-color 1.5s ease-in-out;
+  color: white;
+}
+.bg-3 {
+  background-image: url("../../public/3bg.jpeg");
+  background-size: auto;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 40% 100%;
+  pointer-events: auto;
+  transition: background-color 1.5s ease-in-out;
+  color: white;
+}
+@media (min-width: 768px) {
+  .bg-2 {
+    background-image: none;
+    background-color: white;
+    color: black;
+  }
+  .bg-2:hover {
+    background-image: url("../../public/1bg.jpeg");
+    background-size: auto;
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    pointer-events: auto;
+    transition: background-color 1.5s ease-in-out;
+    color: white;
+  }
+
+  .bg-1 {
+    background-image: none;
+    background-color: white;
+    color: black;
+  }
+  .bg-1:hover {
+    background-image: url("../../public/2bg.jpeg");
+    background-size: auto 100%;
+    background-position: 180%;
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    pointer-events: auto;
+    transition: background-color 1.5s ease-in-out;
+    color: white;
+  }
+
+  .bg-3 {
+    background-image: none;
+    background-color: white;
+    color: black;
+  }
+  .bg-3:hover {
+    background-image: url("../../public/3bg.jpeg");
+    background-size: auto;
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: 40% 100%;
+    pointer-events: auto;
+    transition: background-color 1.5s ease-in-out;
+    color: white;
+  }
 }

@@ -1,113 +1,130 @@
-import Image from 'next/image'
+import Image from "next/image";
+import lion from "../../public/lion.svg";
+import rah from "../../public/rah.svg";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { Raleway } from "next/font/google";
+import { Tulpen_One } from "next/font/google";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway",
+  weight: "400",
+});
+const tulpen = Tulpen_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-inika",
+});
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="w-full bg-white h-auto">
+      <div className="h-16 bg-black flex justify-center p-2">
+        <Image width={70} alt="/" src={lion} />
+        <Image width={130} alt="/" src={rah} />
+      </div>
+      <div></div>
+      <div className="w-full h-auto min-h-screen grid grid-cols-1 md:grid-cols-3">
+        <div className="bg-1 flex-col md:mb-0 pb-10 justify-center items-center text-center">
+          <h2
+            className={`text-[400px] 2xl:text-[500px] pt-20 leading-[450px] ${tulpen.className}`}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            1
+          </h2>
+          <h3 className="text-2xl">VEHICLE RENTAL</h3>
+          <p className="text-[16px] 2xl:text-[20px] px-5 lg:px-10 pt-10 md:pt-20">
+            We offer long-term vehicle rental services for business and private
+            needs. With our expertise and tailored solutions, we provide
+            convenient and customized financial options to meet your specific
+            requirements.
+          </p>
+        </div>
+        <div className="bg-2 flex-col md:mb-0 pb-10 justify-center items-center text-center">
+          <h2
+            className={`text-[400px] 2xl:text-[500px] pt-20 leading-[450px] ${tulpen.className}`}
+          >
+            2
+          </h2>
+          <h3 className="text-2xl">WEB DESIGN</h3>
+          <p className="text-[16px] 2xl:text-[20px] hover px-5 lg:px-10 md:pt-20 pt-10">
+            We provide specialized web design consulting services to help
+            businesses create compelling online experiences. With our expertise
+            and industry experience, we offer valuable insights, strategic
+            guidance, and customized solutions to achieve your web design goals.
+          </p>
+        </div>
+        <div className="bg-3 flex-col md:mb-0 pb-10 justify-center items-center text-center">
+          <h2
+            className={`text-[400px] 2xl:text-[500px] pt-20 leading-[450px] ${tulpen.className}`}
+          >
+            3
+          </h2>
+          <h3 className="text-2xl">CONSULTING</h3>
+          <p className="text-[16px] 2xl:text-[20px] px-5 lg:px-10 md:pt-20 pt-10">
+            We offer specialized consulting services to help businesses overcome
+            challenges, make informed decisions, and achieve their goals. With
+            our deep industry knowledge and extensive experience, we provide
+            valuable insights, strategic guidance, and tailored solutions.
+          </p>
+        </div>
+      </div>
+      <div className="bg-black">
+        <div className="h-44 items-center px-7 flex text-lg max-w-screen-lg mx-auto text-center ">
+          <p className="text-[16px] 2xl:text-[20px]">
+            Rahim is a multi-service company specializing in vehicle rental, web
+            design, and consulting. With a focus on quality and customer
+            satisfaction, we provide flexible long-term vehicle options,
+            professional website development, and strategic guidance to help
+            businesses succeed.
+          </p>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="h-auto pb-10 pt-20 text-black bg-white">
+        <div className="flex-col px-7 max-w-screen-lg mx-auto text-center">
+          <h2 className="md:text-5xl text-3xl font-semibold">
+            LET`S WORK TOGETHER
+          </h2>
+          <p className="pt-10 text-[16px] 2xl:text-[20px]">
+            We welcome the opportunity to engage in meaningful discussions.
+            Reach out to us to explore how we can assist you in overcoming
+            challenges, making informed decisions, and achieving your goals.
+            Let`s start a conversation today.
+          </p>
+          <div className="md:flex  pt-10 text-[16px] 2xl:text-[20px] gap-10 justify-center">
+            <ul className="flex-col  md:text-left">
+              <li className="p-1">Rahim, UAB</li>
+              <li className="p-1">Registration code: 306128942</li>
+              <li className="p-1">VAT: LT100015224519</li>
+            </ul>
+            <div className="flex-col">
+              <div className="flex items-center md:justify-start justify-center gap-3 md:gap-2 p-1">
+                <Phone />
+                <Link href="tel:+370 606 07144">+370 606 07144</Link>
+              </div>
+              <div className="flex items-center md:justify-start justify-center gap-3 md:gap-2 p-1">
+                <Mail />
+                <Link href="mailto:info@rahim.lt">info@rahim.lt</Link>
+              </div>
+              <div className="flex md:justify-start justify-center gap-3 md:gap-2 p-1">
+                <MapPin />
+                <Link
+                  href="https://www.google.com/maps/place/F.+Bogu%C5%A1evi%C4%8Diaus+g.+37,+13180+Savi%C4%8Di%C5%ABnai,+%D0%9B%D0%B8%D1%82%D0%B2%D0%B0/@54.5786924,25.5855769,17z/data=!3m1!4b1!4m5!3m4!1s0x46ddb8497749430f:0xe932addfc843f29!8m2!3d54.5786924!4d25.5855769?entry=ttu"
+                  className="text-left"
+                >
+                  F. Boguševičiaus g. 37,
+                  <br /> Savičiūnų k.,
+                  <br /> LT-13180 Vilniaus r.
+                </Link>
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-600 text-sm mx-auto pt-10">
+            @ Copyright 2023. All rights reserved.
+          </p>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
